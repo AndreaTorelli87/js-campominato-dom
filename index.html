@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CampoMinato</title>
+        <link rel="icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstore-images.microsoft.com%2Fimage%2Fapps.46989.13510798883190320.7631a716-dcf8-4511-8638-5b17b405c08a.700601fd-49ce-4223-b105-2c361aead628%3Fmode%3Dscale%26q%3D90%26h%3D300%26w%3D300&f=1&nofb=1&ipt=20e22da7f369defde4b7344b1e3f701ad86812f6d526e7a6ba7dcd718696d175&ipo=images" sizes="16x16 24x24 32x32 48x48 64x64 128x128">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="p-0 m-0">
+       <header class="d-flex justify-content-between">
+            <div class="p-2">
+                <img src="img/Logo.png" alt="Logo" class="d-inline-block">
+                <h1 class="d-inline-block align-middle fw-bolder">Campo Minato</h1>
+            </div>
+            <div>
+                <label class="fs-4 align-middle" for="difficolta">Difficoltà: </label>
+                <select class="btn btn-outline-success m-3" id="difficolta">
+                    <option value="Easy" selected>Easy</option>
+                    <option value="Hard">Hard</option>
+                    <option value="Impossible">Impossible</option>
+                </select>
+                <button id="gioca" class="btn btn-outline-success m-3">Gioca</button>
+            </div> 
+       </header>
+       <main class="overflow-scroll">
+            <div class="container d-flex align-items-center">
+                <div id="griglia">
+                    <h2>Clicca su "Gioca" per iniziare una nuova partita!!!</h2>
+                </div>
+            </div>
+       </main>
+        <footer class="">
+            <p class="m-2 align-middle">Made with &#128151; by <a href="https://github.com/AndreaTorelli87">Andrea</a></p>
+        </footer>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+</html>
