@@ -69,16 +69,21 @@ function cliccato(div) {
       function () {
 
          if (div.className == `bomba`) {
-            div.classList.toggle("clicked");
-            // clickedBomba.classList += "clicked";
-            div.abort();
+            div.classList.add("clicked");
+            clickedBomba.classList += "clicked";
+            // div.abort();
+            // div.removeEventListener('click', function ());
          } else {
-            div.classList.toggle("clicked");
+            div.classList.add("clicked");
          }
          
       }
    )
 }
+
+// function removeHandler() {
+//    div.removeEventListener("mousemove", function());
+// }
 
 function generaNumeroRandom(min, max) {
    const numeroRandom = Math.floor( Math.random() * (max - min + 1) ) + min;
