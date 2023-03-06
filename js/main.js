@@ -3,6 +3,7 @@ const gioca = document.getElementById("gioca");
 let bombe = [];
 let numeroBombe = 16;
 
+
 gioca.addEventListener('click', 
    function () {
 
@@ -27,8 +28,23 @@ gioca.addEventListener('click',
       console.log(bombe);
 
       creaQuadrati(difficoltà,griglia);
+
+      let clickedBomba = document.getElementsByClassName(`bomba`);
+
+      console.log(clickedBomba);
+
+      // clickedBomba.addEventListener('click',
+      //    function() {
+
+      //       if (this.className == `bomba clicked`) {
+      //          this.classList += "clicked";
+      //       }
+      //    }
+      // )
    }
 )
+
+
 
 
 
@@ -39,7 +55,8 @@ function creaQuadrati(difficoltà,destinazione) {
 
       const div = document.createElement("div");
       if (bombe.includes(i)) {
-         div.className = `bomba`;}  
+         div.className = `bomba`;
+      }  
       div.append(i);   
       destinazione.append(div);
       cliccato(div);
@@ -50,7 +67,15 @@ function cliccato(div) {
 
    div.addEventListener('click', 
       function () {
-         this.classList.toggle("square");
+
+         if (div.className == `bomba`) {
+            div.classList.toggle("clicked");
+            // clickedBomba.classList += "clicked";
+            div.abort();
+         } else {
+            div.classList.toggle("clicked");
+         }
+         
       }
    )
 }
@@ -67,10 +92,10 @@ function generateUniqueRandomNumber(bombe, min, max) {
    let randomNumber;
 
    while (!isValidNumber) {
-       randomNumber = generaNumeroRandom(min, max);
-       if (!bombe.includes(randomNumber)) {
-           isValidNumber = true;
-       }
+      randomNumber = generaNumeroRandom(min, max);
+      if (!bombe.includes(randomNumber)) {
+         isValidNumber = true;
+      }
    }
 
    return randomNumber;

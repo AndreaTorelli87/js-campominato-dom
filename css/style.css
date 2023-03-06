@@ -33,11 +33,11 @@ main{
    transition: scale 0.3s;
 }   
 
-#griglia .square{
+#griglia .clicked{
    background-color: #61D2A4;
 }
 
-#griglia .bomba.square{
+#griglia .bomba.clicked{
    background-color: red;
 }
 
