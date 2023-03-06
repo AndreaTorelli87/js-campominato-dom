@@ -2,7 +2,8 @@ const griglia = document.getElementById("griglia");
 const gioca = document.getElementById("gioca");
 let bombe = [];
 let numeroBombe = 16;
-
+let contatore = document.getElementById('contatore');
+let c = 0;
 
 gioca.addEventListener('click', 
    function () {
@@ -28,19 +29,6 @@ gioca.addEventListener('click',
       console.log(bombe);
 
       creaQuadrati(difficoltà,griglia);
-
-      let clickedBomba = document.getElementsByClassName(`bomba`);
-
-      console.log(clickedBomba);
-
-      // clickedBomba.addEventListener('click',
-      //    function() {
-
-      //       if (this.className == `bomba clicked`) {
-      //          this.classList += "clicked";
-      //       }
-      //    }
-      // )
    }
 )
 
@@ -67,29 +55,25 @@ function cliccato(div) {
 
    div.addEventListener('click', 
       function () {
-
          if (div.className == `bomba`) {
-            div.classList.add("clicked");
-            clickedBomba.classList += "clicked";
-            // div.abort();
-            // div.removeEventListener('click', function ());
+            let clickedBomba = document.getElementsByClassName(`bomba`);
+            for(let x = 0; x <= numeroBombe; x++) {
+               clickedBomba[x].classList.add("clicked");
+               console.log(clickedBomba[x]);
+            }
          } else {
-            div.classList.add("clicked");
+            div.classList.toggle("clicked");
          }
-         
+         c++;
+         contatore.innerText = c;
       }
    )
 }
-
-// function removeHandler() {
-//    div.removeEventListener("mousemove", function());
-// }
 
 function generaNumeroRandom(min, max) {
    const numeroRandom = Math.floor( Math.random() * (max - min + 1) ) + min;
    return numeroRandom;
 }
-
 
 function generateUniqueRandomNumber(bombe, min, max) {
 
@@ -102,6 +86,5 @@ function generateUniqueRandomNumber(bombe, min, max) {
          isValidNumber = true;
       }
    }
-
    return randomNumber;
 }
