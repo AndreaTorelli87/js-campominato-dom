@@ -10,14 +10,18 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="p-0 m-0">
+        <div id="layover" class="d-flex align-items-center justify-content-center flex-column d-none">
+            <button id="Rigioca" class="btn btn-danger m-3">Rigioca</button>
+            <h1>HAI PERSO!!!</h1>
+        </div>
        <header class="d-flex justify-content-between">
             <div class="p-2">
                 <img src="img/Logo.png" alt="Logo" class="d-inline-block">
-                <h1 class="d-inline-block align-middle fw-bolder">Campo Minato</h1>
+                <h2 class="d-inline-block align-middle fw-bolder">Campo Minato</h2>
             </div>
             <div>
                 <h3>Punteggio: </h3>
-                <h3 id="contatore"></h3>
+                <h4 id="contatore" class="text-center"></h4>
             </div>
             <div>
                 <label class="fs-4 align-middle" for="difficolta">Difficoltà: </label>
@@ -30,11 +34,13 @@
             </div> 
        </header>
        <main class="overflow-scroll">
+
             <div class="container d-flex align-items-center">
                 <div id="griglia">
                     <h2>Clicca su "Gioca" per iniziare una nuova partita!!!</h2>
                 </div>
             </div>
+
        </main>
         <footer class="">
             <p class="m-2 align-middle">Made with &#128151; by <a href="https://github.com/AndreaTorelli87">Andrea</a></p>

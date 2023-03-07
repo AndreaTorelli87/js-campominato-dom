@@ -1,5 +1,7 @@
 const griglia = document.getElementById("griglia");
 const gioca = document.getElementById("gioca");
+const rigioca = document.getElementById("Rigioca");
+const layover = document.getElementById("layover");
 let bombe = [];
 let numeroBombe = 16;
 let contatore = document.getElementById('contatore');
@@ -32,6 +34,13 @@ gioca.addEventListener('click',
    }
 )
 
+rigioca.addEventListener('click', 
+   function () {
+
+      location.reload(); 
+
+   }
+)
 
 
 
@@ -57,9 +66,9 @@ function cliccato(div) {
       function () {
          if (div.className == `bomba`) {
             let clickedBomba = document.getElementsByClassName(`bomba`);
-            for(let x = 0; x <= numeroBombe; x++) {
+            for(let x = 0; x < numeroBombe; x++) {
                clickedBomba[x].classList.add("clicked");
-               console.log(clickedBomba[x]);
+               layover.classList.remove("d-none");
             }
          } else {
             div.classList.toggle("clicked");
